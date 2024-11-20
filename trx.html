@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRX Scanner</title>
+    <link rel="stylesheet" href="trx.css">
+</head>
+<body>
+    <div class="container">
+        <img id="eth-logo" src="https://cryptologos.cc/logos/tron-trx-logo.png?v=035" alt="TRX Logo">
+        <div id="checked">Checked: 0</div>
+        <div class="scan-box" id="scan-results">
+        </div>
+        <div class="found-box">
+            <img id="found-logo" src="https://cryptologos.cc/logos/tron-trx-logo.png?v=035" alt="Found">
+            <span id="found-amount">0 TRX</span>
+            <div id="found-words"> <!-- Kazanç kutusunun altında kelimeler burada eklenecek -->
+            </div>
+        </div>
+        <br>
+        <button id="startBtn">Start</button>
+        <button id="stopBtn">Stop</button>
+        <br>
+    </div>
+    <script src="trx.js"></script>
+</body>
+</html>

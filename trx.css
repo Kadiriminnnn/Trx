@@ -1,0 +1,92 @@
+body {
+    background: url('https://giphy.com/gifs/rOL98W0AQDiUvvkT3z') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.3); /* Şeffaf arka plan rengi */
+}
+
+#eth-logo {
+    max-width: 120px;
+    margin-bottom: 10px; /* ETH logosuyla arasındaki mesafeyi azalt */
+}
+
+#checked {
+    margin: 10px 0; /* ETH logosuyla kutucuk arasındaki mesafeyi ayarla */
+}
+
+.scan-box, .found-box {
+    background-color: #b22222; /* Koyu kırmızı arka plan */
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    height: 150px; /* Yüksekliği arttırdık */
+    overflow-y: auto;
+    color: #fff;
+    font-size: 12px; /* Daha okunabilir font boyutu */
+    line-height: 1.5;
+}
+
+.scan-box {
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: #b22222; /* Koyu kırmızı */
+    border: none;
+    padding: 12px 24px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #ff6347; /* Daha açık kırmızı */
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#supportBtn {
+    background-color: #b22222;
+    margin-top: 20px;
+    padding: 12px 24px;
+    border-radius: 8px;
+}
+
+#supportBtn:hover {
+    background-color: #ff6347;
+}
+
+#found-logo {
+    vertical-align: middle;
+    margin-right: 8px;
+    width: 24px;
+    height: auto;
+}
+
+#found-amount {
+    display: inline;
+    font-weight: bold;
+    color: #ffd700;
+}

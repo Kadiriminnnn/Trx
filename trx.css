@@ -1,92 +1,121 @@
+/* Genel Ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background: url('https://media.giphy.com/media/rOL98W0AQDiUvvkT3z/giphy.gif') no-repeat center center fixed;
-    background-size: cover;
-    font-family: 'Arial', sans-serif;
-    color: #fff;
+    font-family: Arial, sans-serif;
+    background-color: #0d1a2b;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-    padding: 0;
+    width: 100vw;
+    overflow: hidden;
+    background-image: url('https://media.giphy.com/media/rOL98W0AQDiUvvkT3z/giphy.gif'); /* Gif URL'sini buraya ekleyin */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* Gif'in ekranı kaplamasını sağlar */
 }
 
-.container {
-    text-align: center;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-    width: 80%;
+/* Ana Uygulama Konteyneri */
+.app-container {
+    width: 100%;
     max-width: 600px;
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.3); /* Şeffaf arka plan rengi */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
 }
 
-#eth-logo {
-    max-width: 120px;
-    margin-bottom: 10px; /* ETH logosuyla arasındaki mesafeyi azalt */
-}
-
-#checked {
-    margin: 10px 0; /* ETH logosuyla kutucuk arasındaki mesafeyi ayarla */
-}
-
-.scan-box, .found-box {
-    background-color: #b22222; /* Koyu kırmızı arka plan */
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    height: 150px; /* Yüksekliği arttırdık */
+/* Wallet Listesi */
+.wallet-list {
+    flex-grow: 1;
+    background-color: rgba(255, 0, 0, 0.5); /* Opaklık ekleyerek arka planın görünmesini sağlar */
+    padding: 10px;
+    border-radius: 8px;
     overflow-y: auto;
-    color: #fff;
-    font-size: 12px; /* Daha okunabilir font boyutu */
-    line-height: 1.5;
+    margin-bottom: 20px;
+    font-size: 12px;
 }
 
-.scan-box {
-    margin-bottom: 30px;
+/* Kontrol Butonları */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 button {
-    background-color: #b22222; /* Koyu kırmızı */
     border: none;
-    padding: 12px 24px;
-    color: #fff;
+    padding: 10px 20px;
     font-size: 16px;
-    border-radius: 8px;
+    font-weight: bold;
+    border-radius: 5px;
     cursor: pointer;
-    margin: 0 10px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #ff6347; /* Daha açık kırmızı */
+    transform: scale(1.05);
 }
 
-button:active {
-    transform: scale(0.95);
+.stop-btn {
+    background-color: #d14c4c;
+    color: white;
 }
 
-#supportBtn {
-    background-color: #b22222;
-    margin-top: 20px;
-    padding: 12px 24px;
+.start-btn {
+    background-color: #4c9bd1;
+    color: white;
+}
+
+/* Inspection Özeti */
+.inspection-summary {
+    font-size: 16px;
+    color: #b0c4de;
+    background-color: rgba(255, 0, 0, 0.5); /* Opaklık eklenmiş */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Bulunan Cüzdan */
+.found-wallets {
+    background-color: rgba(255, 0, 0, 0.5); /* Opaklık eklenmiş */
+    padding: 80px;
     border-radius: 8px;
+    color: #b0c4de;
+    text-align: center;
 }
 
-#supportBtn:hover {
-    background-color: #ff6347;
+.found-wallets h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: white;
 }
 
-#found-logo {
-    vertical-align: middle;
-    margin-right: 8px;
-    width: 24px;
-    height: auto;
+/* Bulunan cüzdan adresleri bölümü */
+.found-box {
+    width: 90%;
+    max-width: 600px;
+    height: 45px; /* Varsayılan yükseklik */
+    overflow-y: auto; /* Dikey kaydırma */
+    border: 1px solid bulu;
+    padding: 1px;
+    background-color: white; /* Opaklık eklenmiş */
+    resize: vertical; /* Yukarı-aşağı boyutlandırma */
+    box-sizing: border-box;
+    font-size: 17px;
+    line-height: 0;
 }
 
-#found-amount {
-    display: inline;
-    font-weight: bold;
-    color: #ffd700;
+.wallet-address {
+    font-size: 14px;
+    color: #b0c4de;
+    word-wrap: break-word;
 }
